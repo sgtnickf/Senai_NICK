@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>TechZone - Loja Gamer - Home</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <style>
+    /* Estilos customizados */
+    body {
+      background-color: #121212;
+      color: #fff;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    header,
+    footer {
+      background-color: #1f1f1f;
+      padding: 15px 0;
+    }
+
+    .banner {
+      background: url('https://example.com/banner-gamer.jpg') center/cover no-repeat;
+      height: 300px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #ffd700;
+      font-size: 2rem;
+      font-weight: bold;
+    }
+
+    .destaque {
+      background-color: #222;
+      padding: 20px;
+      margin-top: 20px;
+      border-radius: 8px;
+    }
+
+    .galeria img {
+      width: 100%;
+      border-radius: 8px;
+      transition: transform 0.3s;
+    }
+
+    .galeria img:hover {
+      transform: scale(1.05);
+    }
+
+    .card {
+      height: 250px;
+      /* altura fixa para os cards */
+      overflow: hidden;
+      /* para evitar que a imagem ultrapasse o card */
+      position: relative;
+    }
+
+    .card-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      /* cobre toda a área, mantendo proporção e cortando o excesso */
+      position: absolute;
+      top: 0;
+      left: 0;
+      border-radius: 8px;
+    }
+
+    footer {
+      text-align: center;
+      font-size: 0.9rem;
+    }
+
+    /* Media Query exemplo para pequenos dispositivos */
+    @media (max-width: 576px) {
+      .banner {
+        height: 180px;
+        font-size: 1.2rem;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header class="container">
+    <nav class="navbar navbar-expand-lg navbar-dark">
+      <a class="navbar-brand" href="#">TechZone - Loja Gamer</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menuNav"
+        aria-controls="menuNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="menuNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link active" href="#">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="#novidades">Novidades</a></li>
+          <li class="nav-item"><a class="nav-link" href="#galeria">Galeria</a></li>
+          <li class="nav-item"><a class="nav-link" href="login.html">Login</a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <section class="banner">
+    Seu melhor destino para eletrônicos gamer
+  </section>
+
+  <section class="container destaque mt-4">
+    <h2>Destaques da Semana</h2>
+    <div class="row">
+      <div class="col-md-4">
+        <div class="card bg-dark text-white">
+          <img src="imagens/headset apresentacao.jpg" class="card-img" alt="Produto 1" />
+          <div class="card-img-overlay">
+            <h5 class="card-title">Headset Gamer NUBOW N5</h5>
+            <p class="card-text">Som 7.1 surround para imersão total.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card bg-dark text-white">
+          <img src="imagens/mouse rgm apresentação.jpg" class="card-img" alt="Produto 2" />
+          <div class="card-img-overlay">
+            <h5 class="card-title">Mouse RGB Pro</h5>
+            <p class="card-text">Precisão e estilo no seu setup.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card bg-dark text-white">
+          <img src="imagens/teclado apresentaçao.jpg" class="card-img" alt="Produto 3" />
+          <div class="card-img-overlay">
+            <h5 class="card-title">Teclado Mecânico</h5>
+            <p class="card-text">Performance e conforto para suas jogadas.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="novidades" class="container mt-5">
+    <h2>Novidades</h2>
+    <div id="carouselNovidades" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="imagens/graphics-card-6995934_1280.jpg" class="d-block w-25" alt="Novidade 1">
+          <div class="carousel-caption d-none d-md-block">
+            <h5>Lançamento Placa de Vídeo Z</h5>
+            <p>Potência e desempenho para gamers.</p>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="imagens/computer-mouse-113100_1280.jpg" class="d-block w-25" alt="Novidade 2">
+          <div class="carousel-caption d-none d-md-block">
+            <h5>Mouse Cursor Gamer</h5>
+            <p>Imersão total com melhor mouse.</p>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="imagens/Melhor-Video-Game-Comprar-em-2025-1.jpg" class="d-block w-25" alt="Novidade 3">
+          <div class="carousel-caption d-none d-md-block">
+            <h5>Console PlayStation 5</h5>
+            <p>Jogos de última geração com gráficos incríveis.</p>
+          </div>
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselNovidades" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Anterior</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselNovidades" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Próximo</span>
+      </button>
+    </div>
+  </section>
+
+  <section id="galeria" class="container mt-5">
+    <h2>Galeria</h2>
+    <div class="row g-3 galeria">
+      <div class="col-sm-6 col-md-4 col-lg-3">
+        <img src="imagens/x-box-1791671_1280.jpg" alt="Imagem 1" />
+      </div>
+      <div class="col-sm-6 col-md-4 col-lg-3">
+        <img src="imagens/nintendo-switch-3061236_1280.jpg" alt="Imagem 2" />
+      </div>
+      <div class="col-sm-6 col-md-4 col-lg-3">
+        <img src="imagens/laptop-5673901_1280.jpg" alt="Imagem 3" />
+      </div>
+      <div class="col-sm-6 col-md-4 col-lg-3">
+        <img src="imagens/como-montar-um-pc-gamer-0-pexels-john-petalcurin-4317157-sca_hntx.1200.jpg" alt="Imagem 4" />
+      </div>
+    </div>
+  </section>
+
+  <footer class="mt-5 p-3">
+    &copy; 2025 Loja Gamer - Todos os direitos reservados
+  </footer>
+
+  <!-- JQuery -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <!-- Bootstrap Bundle com Popper -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+  <script>
+    // Exemplo simples: mensagem de boas-vindas
+    $(document).ready(function () {
+      alert('Bem-vindo à Loja Gamer! Aproveite nossas ofertas.');
+    });
+  </script>
+
+</body>
+
+</html>
